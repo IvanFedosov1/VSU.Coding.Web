@@ -18,7 +18,7 @@ def get_wrapped_element(element, wrapper):
     if sys.version_info[1] < 7:
         return f'<{wrapper}>{element}</{wrapper}>'  # for Python >= 3.7
     else:
-        return '<{}>{}</{}>'.format(wrapper, element, wrapper)  # for Python < 3.7
+        return '<{}>{}</{}>'.format(wrapper, element, wrapper)  # for Python < 3.5
 
 
 html_code = get_wrapped_element('Hello!', 'title')
